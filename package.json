@@ -5,14 +5,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite",
     "dev": "concurrently \"vite\" \"npx json-server db.json\"",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "add-domain": "echo \"zhoang2k2.github.io/e-commerce-project\" > dist/CNAME",
-    "predeploy": "npm run build && npm run add-domain",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@clerk/clerk-react": "^4.30.10",
