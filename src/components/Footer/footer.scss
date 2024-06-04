@@ -1,0 +1,266 @@
+@import "../../styles/mixin.scss";
+
+
+@include mobile {
+  .footer-container {
+    background-image: linear-gradient(315deg, #7474bf, #6691ac);
+    color: #fff;
+    margin-top: auto;
+    z-index: 10;
+
+    .footer-wrapper {
+      width: 90%;
+      margin: auto;
+
+      .author {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        padding: 35px 0;
+
+        .about-author {
+          margin-right: 50px;
+
+          h2 {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            text-align: justify;
+            line-height: 1.5;
+            font-size: 12px;
+          }
+        }
+
+        .author-contact {
+          h2 {
+            font-weight: 500;
+            margin-bottom: 15px;
+          }
+
+          .author-address,
+          .author-hotline,
+          .author-email {
+            font-size: 12px;
+
+            i {
+              display: inline-block;
+              font-size: 16px;
+              width: 20px;
+              margin-right: 10px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        .author-media {
+          h2 {
+            font-weight: 500;
+            margin-bottom: 15px;
+          }
+
+          .media {
+            display: flex;
+            gap: 15px;
+
+            a {
+              color: #fff;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+
+      .copyright {
+        border-top: 1px solid rgba($color: #fff, $alpha: 0.5);
+        font-family: LexenThin;
+        display: flex;
+        gap: 10px;
+        padding: 15px 0;
+        font-size: 12px;
+
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+
+@include tablet {
+  .footer-container {
+    background-image: linear-gradient(315deg, #7474bf, #6691ac);
+    color: #fff;
+    margin-top: auto;
+    z-index: 10;
+
+    .footer-wrapper {
+      width: 90%;
+      margin: auto;
+
+      .author {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        padding: 35px 0;
+
+        .about-author {
+          margin-right: 50px;
+
+          h2 {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            text-align: justify;
+            line-height: 1.5;
+            font-size: 12px;
+          }
+        }
+
+        .author-contact {
+          h2 {
+            font-weight: 500;
+            margin-bottom: 15px;
+          }
+
+          .author-address,
+          .author-hotline,
+          .author-email {
+            font-size: 12px;
+
+            i {
+              display: inline-block;
+              font-size: 16px;
+              width: 20px;
+              margin-right: 10px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        .author-media {
+          h2 {
+            font-weight: 500;
+            margin-bottom: 15px;
+          }
+
+          .media {
+            display: flex;
+            gap: 15px;
+
+            a {
+              color: #fff;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+
+      .copyright {
+        border-top: 1px solid rgba($color: #fff, $alpha: 0.5);
+        font-family: LexenThin;
+        display: flex;
+        gap: 10px;
+        padding: 15px 0;
+        font-size: 12px;
+
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .footer-container {
+    background-image: linear-gradient(315deg, #7474bf, #6691ac);
+    color: #fff;
+    margin-top: auto;
+    z-index: 10;
+
+    .footer-wrapper {
+      width: 90%;
+      margin: auto;
+
+      .author {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        padding: 50px 0;
+
+        .about-author {
+          margin-right: 50px;
+
+          h2 {
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+          }
+
+          p {
+            text-align: justify;
+            line-height: 1.5;
+          }
+        }
+
+        .author-contact {
+          h2 {
+            font-weight: 500;
+            margin-bottom: 15px;
+          }
+
+          .author-address,
+          .author-hotline,
+          .author-email {
+            i {
+              display: inline-block;
+              font-size: 16px;
+              width: 20px;
+              margin-right: 10px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+
+        .author-media {
+          h2 {
+            font-weight: 500;
+            margin-bottom: 15px;
+          }
+
+          .media {
+            display: flex;
+            gap: 15px;
+
+            a {
+              color: #fff;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+
+      .copyright {
+        border-top: 1px solid rgba($color: #fff, $alpha: 0.5);
+        font-family: LexenThin;
+        display: flex;
+        gap: 10px;
+        padding: 15px 0;
+
+        i {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

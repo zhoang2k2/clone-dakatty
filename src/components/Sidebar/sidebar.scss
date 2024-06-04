@@ -1,0 +1,118 @@
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  font-size: 14px;
+  background-color: #341e4f;
+  color: #fff;
+  z-index: 999;
+
+  & div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .admin {
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 0 10px;
+
+    img {
+      width: 200px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 5px solid #0000005b;
+      margin: auto;
+    }
+
+    p {
+      display: flex;
+      flex-direction: column;
+      gap: 7.5px;
+      span {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  .for-admin {
+    h3 {
+      padding: 10px 0;
+      color: #fff;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 18px;
+
+      &::after {
+        content: "";
+        display: block;
+        height: 2px;
+        width: 80%;
+        border-radius: 50px;
+        margin: 10px auto;
+        background-color: #fff;
+      }
+    }
+
+    ul {
+      display: grid;
+      grid-auto-flow: row;
+      align-items: center;
+      gap: 10px;
+
+      li {
+        a {
+          display: inline-block;
+          width: 75%;
+          color: #fff;
+          text-align: left;
+          text-transform: capitalize;
+          text-decoration-line: none;
+          border-radius: 10px;
+          letter-spacing: 1px;
+          list-style: none;
+          padding: 15px 20px;
+          cursor: pointer;
+          transition: 0.2s ease-in-out;
+
+          svg {
+            width: 20px !important;
+            margin-right: 10px;
+          }
+
+          &:hover {
+            color: #fff;
+            background-color: #7631fe;
+          }
+        }
+      }
+    }
+  }
+
+  .logout {
+    position: absolute;
+    bottom: 10px;
+    right: 50%;
+    transform: translateX(50%);
+
+    button {
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      cursor: pointer;
+      height: 50px;
+      padding: 0;
+      font-size: 20px;
+
+      &:hover svg {
+        color: #7631fe;
+      }
+    }
+  }
+}

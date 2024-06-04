@@ -1,0 +1,139 @@
+.order-container {
+  position: relative;
+
+  .products-table {
+    .order-head {
+      tr {
+        text-align: center;
+      }
+    }
+
+    tbody {
+      .order-tr {
+        &:hover button {
+          &.done-btn {
+            border: 1px solid #09bc8a;
+            color: #09bc8a;
+          }
+
+          &.undone-btn {
+            border: 1px solid #7631fe;
+            color: #7631fe;
+          }
+        }
+        .orderId-col {
+          width: 75px;
+        }
+
+        .customer-col {
+          width: 200px !important;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+          }
+        }
+
+        .purchase-col {
+          width: 450px !important;
+
+          .purchase-cards-list {
+            max-height: 175px;
+            overflow-y: scroll;
+            padding: 0 10px;
+
+            .purchase-card {
+              height: 100px;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              position: relative;
+
+              .purchase-img {
+                width: 125px;
+              }
+
+              .purchase-content {
+                p {
+                  width: 200px;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+
+                span {
+                  position: absolute;
+                  right: 10px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+              }
+            }
+          }
+        }
+
+        .total-purchase-col {
+          width: 100px;
+          text-align: center;
+        }
+
+        .status-col {
+          text-align: center;
+
+          span {
+            border-radius: 3px;
+            padding: 5px 0;
+            font-weight: normal;
+            display: inline-block;
+            min-width: 75px;
+            text-transform: capitalize;
+            font-weight: 600;
+          }
+
+          .done {
+            border: 1px solid #09bc8a;
+            color: #09bc8a;
+            background-color: rgba(159, 255, 226, 0.2);
+          }
+
+          .pending {
+            border: 1px solid orange;
+            color: orange;
+            background-color: rgba(255, 218, 151, 0.2);
+          }
+        }
+
+        .action-col {
+          text-align: center;
+
+          button {
+            font-size: 16px;
+            background-color: #fff;
+            border: 1px solid #d9d9d9ff;
+            box-shadow: 0px 2px 0px 0px #d9d9d9ff;
+            padding: 10px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            margin-right: 5px;
+            transition: 0.2s ease-in-out;
+          }
+
+          .done-btn {
+            &:hover {
+              color: #fff;
+              background-color: #09bc8a;
+            }
+          }
+
+          .undone-btn {
+            &:hover {
+              color: #fff;
+              background-color: #7631fe;
+            }
+          }
+        }
+      }
+    }
+  }
+}

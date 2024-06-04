@@ -1,0 +1,84 @@
+@import "../../../styles/mixin.scss";
+
+.edit-admin-container {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  box-shadow: 0 0 10px 0px #333333;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px #5a5a5a;
+    border-radius: 10px;
+    padding: 40px;
+
+    h2 {
+      text-align: center;
+      font-size: 28px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      width: 100%;
+
+      span {
+        font-weight: bold;
+        text-transform: none;
+      }
+    }
+
+    .close-icon {
+      font-size: 20px;
+      position: absolute;
+      right: 15px;
+      top: 15px;
+      opacity: 0.5;
+      cursor: pointer;
+      transition: 0.1s ease-in-out;
+
+      &:hover {
+        opacity: 1;
+        color: #ca434a;
+      }
+    }
+
+    .form-content {
+      label {
+        font-size: 18px;
+        text-transform: capitalize;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        input,
+        select {
+          font-size: 18px;
+          margin: 5px 0 15px;
+          padding: 10px;
+          border-radius: 5px;
+        }
+      }
+
+      .save-btn {
+        @include button(#7631fe, #fff);
+        padding: 10px 0;
+        width: 100%;
+        margin-top: 35px;
+        transform: translateY(-50%);
+      }
+    }
+
+    // .edit-information {
+    // }
+  }
+}

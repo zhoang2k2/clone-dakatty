@@ -1,0 +1,697 @@
+@import "../../../styles/mixin.scss";
+
+@include mobile {
+  .cart-container {
+    position: fixed;
+    top: 75px;
+    right: 10px;
+    height: 100vh;
+    z-index: 30;
+
+    .active {
+      opacity: 1 !important;
+      transform: translate(0, 0) !important;
+    }
+
+    .cart-wrapper {
+      position: relative;
+      margin: auto;
+      width: 80vw;
+      height: 80vh;
+      box-shadow: 0 0 5px 0px #000;
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 10px 10px 30px;
+      opacity: 0.1;
+      transition: 0.5s ease-in-out;
+      overflow: hidden;
+
+      span {
+        position: absolute;
+        top: 25%;
+        right: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        font-size: 14px;
+
+        &:hover {
+          color: #90bedb;
+        }
+
+        .open-purchase-order {
+          transform: scaleX(-1);
+          margin-right: 5px;
+        }
+      }
+
+      .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 18px;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+          color: #ca434a;
+        }
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+      }
+
+      .cart-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        .cart-info {
+          form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 12px;
+
+            label {
+              display: flex;
+              flex-direction: column;
+              font-weight: 600;
+              position: relative;
+
+              input {
+                margin-top: 5px;
+                padding: 5px;
+                border: none;
+                border-bottom: 3px solid #f5f5f5;
+
+                &:focus {
+                  outline: none;
+                }
+              }
+            }
+          }
+
+          .purchase {
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: 600;
+            float: right;
+          }
+
+          .buy-btn {
+            @include button(#15b987, #fff);
+            padding: 10px 15px;
+            width: 100%;
+            margin-top: 5px;
+          }
+        }
+
+        .cart-products {
+          height: 50vh;
+          overflow-y: scroll;
+          background-color: #f5f5f5;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+
+            li {
+              display: flex;
+              flex-direction: row;
+              gap: 10px;
+              border: 1px solid #000;
+              border-radius: 5px;
+              padding: 5px;
+              background-color: #fff;
+              position: relative;
+              height: 100px;
+
+              .sub-card-img {
+                border-radius: 10px;
+                overflow: hidden;
+                width: 30%;
+                height: 70px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+
+              .sub-card-title {
+                width: 65%;
+
+                h3 {
+                  width: 90%;
+                  height: 25px;
+                  margin-top: 5px;
+                  margin-bottom: 5px;
+                  font-size: 14px;
+                  font-weight: 600;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;
+                }
+
+                p {
+                  margin-bottom: 5px;
+                  font-size: 10px;
+                }
+
+                .price {
+                  font-size: 14px;
+                  color: #90bedb;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  margin-bottom: 7.5px;
+                }
+
+                .age {
+                  width: 50%;
+                  float: left;
+                }
+              }
+
+              .delete-btn {
+                position: absolute;
+                right: 5px;
+                border-radius: 3px;
+                font-size: 10px;
+                padding: 2.5px 4px;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+
+                svg {
+                  font-size: 16px;
+                }
+
+                &:hover svg {
+                  color: #ca434a;
+                }
+              }
+
+              .sub-card-action {
+                position: absolute;
+                bottom: 5px;
+                left: 10px;
+                display: flex;
+                height: 20px;
+                gap: 5px;
+
+                .increase-btn,
+                .decrease-btn {
+                  border-radius: 3px;
+                  font-size: 10px;
+                  padding: 2.5px 4px;
+                  border: 1px solid #90bedb;
+                  color: #90bedb;
+                  background-color: transparent;
+                  cursor: pointer;
+                  transition: 0.2s ease-in-out;
+
+                  &:hover {
+                    background-color: #90bedb;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include tablet {
+  .cart-container {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    height: 100vh;
+    z-index: 30;
+
+    .active {
+      opacity: 1 !important;
+      transform: translate(0, 0) !important;
+    }
+
+    .cart-wrapper {
+      position: relative;
+      margin: auto;
+      width: 350px;
+      height: 80vh;
+      box-shadow: 0 0 5px 0px #000;
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 20px 20px 50px;
+      transform: translate(100%, 0);
+      opacity: 0.1;
+      transition: 0.5s ease-in-out;
+
+      span {
+        position: absolute;
+        top: 235px;
+        right: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          color: #90bedb;
+        }
+
+        .open-purchase-order {
+          transform: scaleX(-1);
+          margin-right: 5px;
+        }
+      }
+
+      .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 18px;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+          color: #ca434a;
+        }
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+      }
+
+      .cart-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        .cart-info {
+          form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 16px;
+
+            label {
+              display: flex;
+              flex-direction: column;
+              font-weight: 600;
+              position: relative;
+
+              input {
+                margin-top: 5px;
+                padding: 7.5px;
+                border: none;
+                border-bottom: 3px solid #f5f5f5;
+
+                &:focus {
+                  outline: none;
+                }
+              }
+            }
+          }
+
+          .purchase {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: 600;
+            float: right;
+          }
+
+          .buy-btn {
+            @include button(#15b987, #fff);
+            padding: 10px 15px;
+            width: 100%;
+            margin-top: 10px;
+          }
+        }
+
+        .cart-products {
+          height: 50vh;
+          overflow-y: scroll;
+          background-color: #f5f5f5;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+
+            li {
+              display: flex;
+              flex-direction: row;
+              gap: 15px;
+              border: 1px solid #000;
+              border-radius: 5px;
+              padding: 5px;
+              background-color: #fff;
+              position: relative;
+
+              .sub-card-img {
+                border-radius: 10px;
+                overflow: hidden;
+                width: 30%;
+                height: 70px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+
+              .sub-card-title {
+                width: 75%;
+                h3 {
+                  width: 90%;
+                  height: 25px;
+                  margin-top: 5px;
+                  margin-bottom: 5px;
+                  font-size: 16px;
+                  font-weight: 600;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;
+                }
+
+                p {
+                  margin-bottom: 5px;
+                  font-size: 14px;
+                }
+
+                .price {
+                  font-size: 14px;
+                  color: #90bedb;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  margin-bottom: 7.5px;
+                }
+
+                .age {
+                  width: 50%;
+                  float: left;
+                }
+              }
+
+              .delete-btn {
+                position: absolute;
+                right: 5px;
+                border-radius: 3px;
+                font-size: 10px;
+                padding: 2.5px 4px;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+
+                svg {
+                  font-size: 16px;
+                }
+
+                &:hover svg {
+                  color: #ca434a;
+                }
+              }
+
+              .sub-card-action {
+                position: absolute;
+                bottom: 5px;
+                left: 10px;
+                display: flex;
+                height: 20px;
+                gap: 5px;
+
+                .increase-btn,
+                .decrease-btn {
+                  border-radius: 3px;
+                  font-size: 10px;
+                  padding: 2.5px 4px;
+                  border: 1px solid #90bedb;
+                  color: #90bedb;
+                  background-color: transparent;
+                  cursor: pointer;
+                  transition: 0.2s ease-in-out;
+
+                  &:hover {
+                    background-color: #90bedb;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include desktop {
+  .cart-container {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    height: 100vh;
+    z-index: 30;
+
+    .active {
+      opacity: 1 !important;
+      transform: translate(0, 0) !important;
+    }
+
+    .cart-wrapper {
+      position: relative;
+      margin: auto;
+      width: 500px;
+      height: 80vh;
+      box-shadow: 0 0 5px 0px #000;
+      border-radius: 10px;
+      background-color: #fff;
+      padding: 20px 20px 50px;
+      transform: translate(100%, 0);
+      opacity: 0.1;
+      transition: 0.5s ease-in-out;
+
+      span {
+        position: absolute;
+        top: 235px;
+        right: 20px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          color: #90bedb;
+        }
+
+        .open-purchase-order {
+          transform: scaleX(-1);
+          margin-right: 5px;
+        }
+      }
+
+      .close-btn {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 18px;
+        opacity: 0.5;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+          opacity: 1;
+          color: #ca434a;
+        }
+      }
+
+      h2 {
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+      }
+
+      .cart-body {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        .cart-info {
+          form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            font-size: 16px;
+
+            label {
+              display: flex;
+              flex-direction: column;
+              font-weight: 600;
+              position: relative;
+
+              input {
+                margin-top: 5px;
+                padding: 7.5px;
+                border: none;
+                border-bottom: 3px solid #f5f5f5;
+
+                &:focus {
+                  outline: none;
+                }
+              }
+            }
+          }
+
+          .purchase {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: 600;
+            float: right;
+          }
+
+          .buy-btn {
+            @include button(#15b987, #fff);
+            padding: 10px 15px;
+            width: 100%;
+            margin-top: 10px;
+          }
+        }
+
+        .cart-products {
+          height: 50vh;
+          overflow-y: scroll;
+          background-color: #f5f5f5;
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 10px;
+
+            li {
+              display: flex;
+              flex-direction: row;
+              gap: 15px;
+              border: 1px solid #000;
+              border-radius: 5px;
+              padding: 5px;
+              background-color: #fff;
+              position: relative;
+
+              .sub-card-img {
+                border-radius: 10px;
+                overflow: hidden;
+                width: 125px;
+                height: 100px;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
+
+              .sub-card-title {
+                h3 {
+                  width: 250px;
+                  height: 25px;
+                  margin-bottom: 5px;
+                  font-size: 20px;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  overflow: hidden;
+                }
+
+                p {
+                  margin-bottom: 5px;
+                  font-size: 14px;
+                }
+
+                .price {
+                  font-size: 18px;
+                  color: #90bedb;
+                  font-weight: 600;
+                  letter-spacing: 1px;
+                  margin-bottom: 7.5px;
+                }
+
+                .age {
+                  width: 50%;
+                  float: left;
+                }
+              }
+
+              .delete-btn {
+                position: absolute;
+                right: 5px;
+                border-radius: 3px;
+                font-size: 10px;
+                padding: 2.5px 4px;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+
+                svg {
+                  font-size: 16px;
+                }
+
+                &:hover svg {
+                  color: #ca434a;
+                }
+              }
+
+              .sub-card-action {
+                position: absolute;
+                bottom: 10px;
+                right: 5px;
+                display: flex;
+                height: 20px;
+                gap: 5px;
+
+                .increase-btn,
+                .decrease-btn {
+                  border-radius: 3px;
+                  font-size: 10px;
+                  padding: 2.5px 4px;
+                  border: 1px solid #90bedb;
+                  color: #90bedb;
+                  background-color: transparent;
+                  cursor: pointer;
+                  transition: 0.2s ease-in-out;
+
+                  &:hover {
+                    background-color: #90bedb;
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
